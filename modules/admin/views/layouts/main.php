@@ -38,21 +38,21 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                 </div>
                 <ul class="sidebar-menu do-nicescrol in">
                     <li class="sidebar-header">MAIN NAVIGATION</li>
-                    <li class="active">
-                        <a href="index.html" class="active">
+                    <li class="<?=(Yii::$app->controller->id == 'dashboard' ? 'active' : '')?>">
+                        <a href="/admin/dashboard/index" class="<?=(Yii::$app->controller->id == 'dashboard' ? 'active' : '')?>">
                             <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
                         </a>
                     </li>
 
-                    <li>
-                        <a href="icons.html">
-                            <i class="zmdi zmdi-invert-colors"></i> <span>UI Icons</span>
+                    <li class="<?=(Yii::$app->controller->id == 'catalog' ? 'active' : '')?>">
+                        <a href="/admin/catalog/index" class="<?=(Yii::$app->controller->id == 'catalog' ? 'active' : '')?>">
+                            <i class="zmdi zmdi-xbox"></i> <span>Товары</span>
                         </a>
                     </li>
 
                     <li>
                         <a href="forms.html">
-                            <i class="zmdi zmdi-format-list-bulleted"></i> <span>Forms</span>
+                            <i class="zmdi zmdi-format-list-bulleted"></i> <span><?=Yii::$app->controller->id ?></span>
                         </a>
                     </li>
 
